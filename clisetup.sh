@@ -1,4 +1,4 @@
-brew cask install iterm2
+
 
 git pull https://github.com/mbadolato/iTerm2-Color-Schemes.git
 

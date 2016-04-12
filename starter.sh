@@ -89,6 +89,9 @@ apps=(
 	mongodb
     vagrant
     vagrant-manager
+    iterm2
+    docker
+    docker-machine
 )
 
 # Install apps to /Applications
