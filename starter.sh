@@ -92,6 +92,7 @@ apps=(
     iterm2
     docker
     docker-machine
+	dash
 )
 
 # Install apps to /Applications
