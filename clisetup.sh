@@ -1,11 +1,16 @@
+#ensuring iterm2 has been installed install the 'solarized2' iterm2 color scheme following these instructions
+# Go here: https://gist.github.com/kevin-smets/8568070
 
+#change default shell to zsh
+chsh -s /bin/zsh
 
-git pull https://github.com/mbadolato/iTerm2-Color-Schemes.git
+#install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-cd Iterm2-Color-Schemes
+#open .zshrc file and copy over the config file
+#note that the theme should be set to "agnoster"
 
-brew install zsh
+#open the .vimrc file and copy over the config file
 
-brew install tmux
-
-
+#install the meslo powerline 12pt font following the same instructions here
+# here: https://gist.github.com/kevin-smets/8568070
