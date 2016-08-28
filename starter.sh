@@ -18,6 +18,34 @@ brew update
 echo "Installing Ruby..."
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 
+# golang
+if test ! $(which go); then
+  echo "Installing golang"
+  brew install go
+fi
+
+# installing pip and virtualenv for python development
+if test ! $(which python3); then
+  echo "Installing python3"
+  brew install python3
+fi
+
+if test ! $(which pip); then
+  echo "Installing pip"
+  brew install pip
+fi
+
+if test ! $(which virtualenv); then
+  echo "Installing virtualenv"
+  pip install virtualenv
+fi
+
+#create directory in which to store virtual environments
+echo "Creating python virtual environments..."
+mkdir ~/.virtualenvs
+virtualenv -p python py2 #this should be python2 
+virtualenv -p python3 py3
+
 # Node/npm
 if test ! $(which npm); then
 	echo "Installing Node..."
@@ -108,6 +136,6 @@ defaults write com.apple.finder QLEnableTextSelection -bool true && killall Find
 
 # Create /Sites/ directory
 echo "Creating /Sites/"
-sudo mkdir /var/www
+sudo mkdir ~/Sites/
 
 echo "Done!"
