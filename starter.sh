@@ -121,6 +121,8 @@ apps=(
     docker
     docker-machine
 	dash
+  doctl
+  terraform
 )
 
 # Install apps to /Applications
