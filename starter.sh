@@ -91,13 +91,12 @@ brew install brew-cask
 apps=(
 	spectacle
 	slack
-  	appcleaner
+  appcleaner
 	firefox
 	google-chrome
 	google-drive
 	spotify
 	atom
-	sublime-text3
 	vlc
 	quicklook-json
 	qlcolorcode
@@ -115,11 +114,11 @@ apps=(
 	google-drive
 	omni-disk-sweeper
 	mongodb
-    vagrant
-    vagrant-manager
-    iterm2
-    docker
-    docker-machine
+  vagrant
+  vagrant-manager
+  iterm2
+  docker
+  docker-machine
 	dash
   doctl
   terraform
