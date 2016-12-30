@@ -14,3 +14,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 #install the meslo powerline 12pt font following the same instructions here
 # here: https://gist.github.com/kevin-smets/8568070
+
+#download solarized vimrc scheme here
+#http://ethanschoonover.com/solarized/vim-colors-solarized
