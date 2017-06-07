@@ -103,7 +103,6 @@ apps=(
 	qlstephen
 	virtualbox
 	evernote
-	deezer
 	dropbox
 	cyberduck
 	skype
@@ -122,6 +121,7 @@ apps=(
 	dash
   doctl
   terraform
+  cleanmymac3
 )
 
 # Install apps to /Applications
