@@ -122,6 +122,8 @@ apps=(
   doctl
   terraform
   cleanmymac3
+  todoist
+  tomatoone
 )
 
 # Install apps to /Applications
