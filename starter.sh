@@ -14,10 +14,6 @@ brew doctor
 # Update homebrew recipes
 brew update
 
-# RVM/ruby
-echo "Installing Ruby..."
-\curl -sSL https://get.rvm.io | bash -s stable --ruby
-
 # golang
 if test ! $(which go); then
   echo "Installing golang"
@@ -47,79 +43,79 @@ virtualenv -p python py2 #this should be python2
 virtualenv -p python3 py3
 
 # Node/npm
-if test ! $(which npm); then
-	echo "Installing Node..."
-	brew install node
-fi
+# if test ! $(which npm); then
+# 	echo "Installing Node..."
+# 	brew install node
+# fi
 
 # Adjust PATH
-echo "Adjusting PATH"
-export NODE_PATH="/usr/local/lib/node"
-export PATH="/usr/local/share/npm/bin:$PATH"
+# echo "Adjusting PATH"
+# export NODE_PATH="/usr/local/lib/node"
+# export PATH="/usr/local/share/npm/bin:$PATH"
 
 # Grunt
-echo "Installing Grunt..."
-npm install -g grunt-cli
-
+# echo "Installing Grunt..."
+# npm install -g grunt-cli
+#
 # Bower
-echo "Installing Bower..."
-npm install -g bower
-
+# echo "Installing Bower..."
+# npm install -g bower
+#
 # Yeoman
-echo "Installing Yeoman..."
-npm install -g yo
-npm install -g generator-webapp
-
+# echo "Installing Yeoman..."
+# npm install -g yo
+# npm install -g generator-webapp
+#
 # Sass
-echo "Installing Sass..."
-gem install sass
-
+# echo "Installing Sass..."
+# gem install sass
+#
 # Compass
-echo "Installing compass..."
-gem update --system
-gem install compass
-
+# echo "Installing compass..."
+# gem update --system
+# gem install compass
+#
 # Spinners
-echo "Installing spinners and sass-css-importer..."
-gem install spinners
-gem install --pre sass-css-importer
+# echo "Installing spinners and sass-css-importer..."
+# gem install spinners
+# gem install --pre sass-css-importer
 
 # Quick install for apps
 brew tap caskroom/cask
 brew install brew-cask
 
 apps=(
-	spectacle
+	#spectacle
 	slack
-  appcleaner
+  #appcleaner
 	firefox
 	google-chrome
 	google-drive
 	spotify
 	atom
-	vlc
-	quicklook-json
-	qlcolorcode
-	qlstephen
+	#vlc
+	#quicklook-json
+	#qlcolorcode
+	#qlstephen
 	virtualbox
 	evernote
-	dropbox
-	cyberduck
+	#dropbox
+	#cyberduck
 	skype
-	blender
-	balsamic
-	macaw
-	adobe-photoshop-cc
+	#blender
+	#balsamic
+	#macaw
+	#adobe-photoshop-cc
 	google-drive
 	omni-disk-sweeper
-	mongodb
+	#mongodb
   vagrant
   vagrant-manager
   iterm2
   docker
   docker-machine
-	dash
-  doctl
+	#dash
+  #doctl
   terraform
   cleanmymac3
   todoist

@@ -1,11 +1,12 @@
 #ensuring iterm2 has been installed install the 'solarized2' iterm2 color scheme following these instructions
 # Go here: https://gist.github.com/kevin-smets/8568070
 
+#INSTRUCTIONS FOR ZSH INSTALLATION - has issues w/ GOPATH and environment variables
 #change default shell to zsh
-chsh -s /bin/zsh
+#chsh -s /bin/zsh
 
 #install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #open .zshrc file and copy over the config file
 #note that the theme should be set to "agnoster"
@@ -17,3 +18,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 #download solarized vimrc scheme here
 #http://ethanschoonover.com/solarized/vim-colors-solarized
+
+#INSTRUCTIONS FOR BASH RELATED INSTALLATION
+chsh -s /bin/bash
