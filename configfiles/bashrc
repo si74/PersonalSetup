@@ -1,0 +1,6 @@
+set -o vi
+
+source "$HOME/.git-prompt.sh"
+
+# GIT PS1 State
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
