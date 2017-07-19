@@ -137,4 +137,9 @@ defaults write com.apple.finder QLEnableTextSelection -bool true && killall Find
 echo "Creating /Sites/"
 sudo mkdir ~/Sites/
 
+# Create gocode directory for development
+echo "Creating gocode subfolder"
+cd ~/Sites
+sudo mkdir gocode
+
 echo "Done!"
