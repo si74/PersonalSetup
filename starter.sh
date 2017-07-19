@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Ask for administrator password upfront
 sudo -v
 
@@ -14,10 +16,20 @@ brew doctor
 # Update homebrew recipes
 brew update
 
+if test ! $(which direnv); then
+  echo "Installing direnv"
+  brew install direnv
+fi
+
 # golang
 if test ! $(which go); then
   echo "Installing golang"
   brew install go
+fi
+
+if test ! $(which glide); then
+  echo "Installing glide"
+  brew install glide
 fi
 
 # installing pip and virtualenv for python development
@@ -85,6 +97,7 @@ brew tap caskroom/cask
 brew install brew-cask
 
 apps=(
+  ansible
 	#spectacle
 	slack
   #appcleaner
@@ -114,6 +127,7 @@ apps=(
   iterm2
   docker
   docker-machine
+  docker-compose
 	#dash
   #doctl
   terraform
@@ -133,13 +147,38 @@ echo "Actual files are in /opt/homebrew-cask/Caskroom/"
 echo "Making text selectable in quick view"
 defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
 
-# Create /Sites/ directory
-echo "Creating /Sites/"
-sudo mkdir ~/Sites/
+# Setup docker for development
+echo "Setting up docker and docker-machine"
+docker-machine create --driver virtualbox \
+--virtualbox-host-dns-resolver dev
+
+eval "$(docker-machine env dev)"
+
+# Create /Sites/ directory - commented out b/c this should already be created prior to running script
+#echo "Creating /Sites/"
+#sudo mkdir ~/Sites/
 
 # Create gocode directory for development
 echo "Creating gocode subfolder"
-cd ~/Sites
+cd "$HOME/Sites"
 sudo mkdir gocode
+
+echo "Setting up gocode .envrc file"
+cd "$HOME/Sites/gocode"
+echo export GOPATH="$HOME/Sites/gocode" > .envrc
+direnv allow
+
+echo "Setting up golang sub-directories"
+sudo mkdir src
+sudo mkdir bin
+sudo mkdir pkg
+
+echo "Setting up relevant github sub-directories"
+cd "$HOME/Sites/gocode/src"
+mkdir github.com
+
+# Run CLI setup script
+chmod +x "$HOME/Sites/snehamerica/clisetup.sh"
+./clisetup.sh
 
 echo "Done!"
