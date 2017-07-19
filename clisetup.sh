@@ -1,23 +1,16 @@
+#!/bin/bash
+
+# INSTRUCTIONS FOR BASH RELATED INSTALLATION
+chsh -s /bin/bash
+
+# Change iterm to color scheme
 #ensuring iterm2 has been installed install the 'solarized2' iterm2 color scheme following these instructions
 # Go here: https://gist.github.com/kevin-smets/8568070
+# Recommendation - use Solarized Dark or Tango Dark
 
-#INSTRUCTIONS FOR ZSH INSTALLATION - has issues w/ GOPATH and environment variables
-#change default shell to zsh
-#chsh -s /bin/zsh
+# Setup git to view completion from command line
+brew install bash-git-prompt
 
-#install oh-my-zsh
-#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-#open .zshrc file and copy over the config file
-#note that the theme should be set to "agnoster"
-
-#open the .vimrc file and copy over the config file
-
-#install the meslo powerline 12pt font following the same instructions here
-# here: https://gist.github.com/kevin-smets/8568070
-
-#download solarized vimrc scheme here
-#http://ethanschoonover.com/solarized/vim-colors-solarized
-
-#INSTRUCTIONS FOR BASH RELATED INSTALLATION
-chsh -s /bin/bash
+# Move bashrc file to appropriate location & run it
+cp "$HOME/Sites/snehamerica/configfiles/bashrc" "$HOME/.bashrc"
+source ~/.bashrc
