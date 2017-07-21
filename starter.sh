@@ -177,6 +177,10 @@ echo "Setting up relevant github sub-directories"
 cd "$HOME/Sites/gocode/src"
 mkdir github.com
 
+echo "Installing golint - not gofmt and go vet should already work"
+go get -u github.com/golang/lint/golint
+mv "$HOME/Sites/gocode/bin/golint" "/usr/local/bin/golint"
+
 # Run CLI setup script
 chmod +x "$HOME/Sites/snehamerica/clisetup.sh"
 ./clisetup.sh
