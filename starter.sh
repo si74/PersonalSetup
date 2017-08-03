@@ -40,7 +40,7 @@ fi
 
 if test ! $(which pip); then
   echo "Installing pip"
-  brew install pip
+  sudo easy_install pip
 fi
 
 if test ! $(which virtualenv); then
