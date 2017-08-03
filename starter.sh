@@ -51,8 +51,10 @@ fi
 #create directory in which to store virtual environments
 echo "Creating python virtual environments..."
 mkdir ~/.virtualenvs
+cd ~/.virtualenvs
 virtualenv -p python py2 #this should be python2
 virtualenv -p python3 py3
+
 
 # Node/npm
 # if test ! $(which npm); then
