@@ -40,7 +40,7 @@ fi
 
 if test ! $(which pip); then
   echo "Installing pip"
-  sudo easy_install pip
+  brew install pip
 fi
 
 if test ! $(which virtualenv); then
@@ -51,10 +51,8 @@ fi
 #create directory in which to store virtual environments
 echo "Creating python virtual environments..."
 mkdir ~/.virtualenvs
-cd ~/.virtualenvs
 virtualenv -p python py2 #this should be python2
 virtualenv -p python3 py3
-
 
 # Node/npm
 # if test ! $(which npm); then
@@ -162,12 +160,12 @@ eval "$(docker-machine env dev)"
 
 # Create gocode directory for development
 echo "Creating gocode subfolder"
-cd "$HOME/Sites"
+cd "$HOME/sites"
 sudo mkdir gocode
 
 echo "Setting up gocode .envrc file"
-cd "$HOME/Sites/gocode"
-echo export GOPATH="$HOME/Sites/gocode" > .envrc
+cd "$HOME/sites/gocode"
+echo export GOPATH="$HOME/sites/gocode" > .envrc
 direnv allow
 
 echo "Setting up golang sub-directories"
@@ -176,15 +174,15 @@ sudo mkdir bin
 sudo mkdir pkg
 
 echo "Setting up relevant github sub-directories"
-cd "$HOME/Sites/gocode/src"
+cd "$HOME/sites/gocode/src"
 mkdir github.com
 
 echo "Installing golint - not gofmt and go vet should already work"
 go get -u github.com/golang/lint/golint
-mv "$HOME/Sites/gocode/bin/golint" "/usr/local/bin/golint"
+mv "$HOME/sites/gocode/bin/golint" "/usr/local/bin/golint"
 
 # Run CLI setup script
-chmod +x "$HOME/Sites/snehamerica/clisetup.sh"
+chmod +x "$HOME/sites/snehamerica/clisetup.sh"
 ./clisetup.sh
 
 echo "Done!"

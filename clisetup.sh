@@ -12,7 +12,7 @@ chsh -s /bin/bash
 brew install bash-git-prompt
 
 # Move bashrc file to appropriate location & run it
-cp "$HOME/Sites/snehamerica/configfiles/bashrc" "$HOME/.bashrc"
+cp "$HOME/sites/snehamerica/configfiles/bashrc" "$HOME/.bashrc"
 source ~/.bashrc
 
 # Install vim-go
@@ -20,4 +20,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
 
 # Move vimrc file to appropriate location & run it
-cp "$HOME/Sites/snehamerica/configfiles/vimrc" "$HOME/.vimrc"
+cp "$HOME/sites/snehamerica/configfiles/vimrc" "$HOME/.vimrc"
