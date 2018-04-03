@@ -32,6 +32,14 @@ if test ! $(which glide); then
   brew install glide
 fi
 
+if test ! $(which goenv); then
+  echo "Installing goenv"
+  brew install goenv
+fi
+
+goenv install 1.9.2
+goenv install 1.10.1
+
 # installing pip and virtualenv for python development
 if test ! $(which python3); then
   echo "Installing python3"
@@ -154,19 +162,20 @@ docker-machine create --driver virtualbox \
 
 eval "$(docker-machine env dev)"
 
-# Create /Sites/ directory - commented out b/c this should already be created prior to running script
-#echo "Creating /Sites/"
-#sudo mkdir ~/Sites/
+# Create /sites/ directory - commented out b/c this should already be created prior to running script
+#echo "Creating /sites/"
+#sudo mkdir ~/sites/
 
 # Create gocode directory for development
 echo "Creating gocode subfolder"
 cd "$HOME/sites"
 sudo mkdir gocode
 
-echo "Setting up gocode .envrc file"
-cd "$HOME/sites/gocode"
-echo export GOPATH="$HOME/sites/gocode" > .envrc
-direnv allow
+# echo "Setting up gocode .envrc file"
+# This is commented out b/c the attached envrc file should be moved here
+# cd "$HOME/sites/gocode"
+# echo export GOPATH="$HOME/sites/gocode" > .envrc
+# direnv allow
 
 echo "Setting up golang sub-directories"
 sudo mkdir src
