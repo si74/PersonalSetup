@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # INSTRUCTIONS FOR BASH RELATED INSTALLATION
-chsh -s /bin/bash
+#chsh -s /bin/bash
 
 # Change iterm to color scheme
 #ensuring iterm2 has been installed install the 'solarized2' iterm2 color scheme following these instructions
